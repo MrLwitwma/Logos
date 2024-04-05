@@ -1,0 +1,50 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100vh;
+    background: black;
+}
+
+.container{
+    width: 300px;
+    height: 300px;
+    border-radius: 50px;
+    background: linear-gradient(to bottom right, blue, purple, red, orange, yellow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo{
+    width: 170px;
+    height: 170px;
+    border-radius: 50px;
+    border: 25px solid white;
+    position: relative;
+}
+.logo::before{
+    content: "";
+    position: absolute;
+    bottom: 80%;
+    left: 80%;
+    border-radius: 50%;
+    background: white;
+    width: 20px;
+    height: 20px;
+}
+.logo:after{
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    border: 20px solid white;
+    border-radius: 50%;
+}
+
+.container:active{
+    scale: 0.89;
+}
